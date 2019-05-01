@@ -69,7 +69,7 @@ export default class SearchableDropDown extends Component {
 
   searchedItems = searchedText => {
     var ac = this.props.items.filter(function(item) {
-      return item.name.toLowerCase().indexOf(searchedText.toLowerCase()) > -1;
+      return item.airport_name.toLowerCase().indexOf(searchedText.toLowerCase()) > -1 || item.airport_code.toLowerCase().indexOf(searchedText.toLowerCase()) > -1;
     });
     let item = {
       id: -1,
@@ -102,7 +102,7 @@ export default class SearchableDropDown extends Component {
           }, 0);
         }}
       >
-        <Text style={{ ...this.props.itemTextStyle }}>{item.name}</Text>
+        <Text style={{ ...this.props.itemTextStyle }}>{`${item.airport_name} (${item.airport_code})`}</Text>
       </TouchableOpacity>
     );
   };
