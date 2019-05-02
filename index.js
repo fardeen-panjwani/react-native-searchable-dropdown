@@ -128,6 +128,7 @@ export default class SearchableDropDown extends Component {
               item: defaultItemValue,
               listItems: this.props.items
             });
+            this.props.onFocus();
           }}
           onChangeText={text => {
             this.searchedItems(text);
