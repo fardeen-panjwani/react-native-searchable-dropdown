@@ -82,9 +82,7 @@ export default class SearchableDropDown extends Component {
     const onTextChange = this.props.onTextChange;
 
     if (onTextChange && typeof onTextChange === 'function') {
-      setTimeout(() => {
-        onTextChange(searchedText);
-      }, 0);
+      onTextChange(searchedText);
     }
   };
 
