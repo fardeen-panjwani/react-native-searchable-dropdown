@@ -132,7 +132,7 @@ export default class SearchableDropDown extends Component {
           onChangeText={text => {
             this.searchedItems(text);
           }}
-          value={this.state.item.name}
+          value={this.state.item.airport_name}
           style={{ ...this.props.textInputStyle }}
           placeholderTextColor={this.props.placeholderTextColor}
           placeholder={this.props.placeholder}
